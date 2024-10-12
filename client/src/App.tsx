@@ -1,25 +1,21 @@
 import React from 'react';
 import {Button , Input} from 'antd'
 import ThemeProvider from "./theme";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import LoginPage from "./pages/auth/login/LoginPage.tsx";
+import RegisterPage from "./pages/auth/register/RegisterPage.tsx";
+import HomePage from "./pages/private/home/HomePage.tsx";
 
 function App(props) {
     return (
         <ThemeProvider>
-            <div className="h-screen flex justify-center items-center  flex-col gap-5">
-
-                <h1 className=" text-gray-500 text-3xl font-bold leading-tight">
-                    Home page
-                </h1>
-
-                <Button type="primary">
-                    Primary
-                </Button>
-                <Button type="default">
-                    Default
-                </Button>
-
-                <Input/>
-            </div>
+           <BrowserRouter>
+               <Routes>
+                   <Route path="/login" element={<LoginPage/>}/>
+                   <Route path="/register" element={<RegisterPage/>}/>
+                   <Route path="/" element={<HomePage/>}/>
+               </Routes>
+           </BrowserRouter>
         </ThemeProvider>
 
     );
