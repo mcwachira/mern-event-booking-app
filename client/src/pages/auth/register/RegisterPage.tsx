@@ -43,7 +43,7 @@ function RegisterPage(props) {
                     Register
                 </Button>
 
-                <Link to='/'>
+                <Link to='/login'>
                         Already have an account ? Login
                 </Link>
             </Form>
