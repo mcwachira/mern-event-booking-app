@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 *{
-  border:0;
+
   padding:0;
   margin:0;
-  box-sizing:0;
+  box-sizing:border-box;
+  font-weight: 500;
+}
+
+.ant-form-item{
+  margin-bottom:0px !important;
+}
+.ant-form-item-label{
+  padding:5px !important;
+}
+
+a:hover{
+  color:#222832 !important;
 }
